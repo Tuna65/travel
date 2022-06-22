@@ -71,12 +71,13 @@
         height: 100%;
         background-color: var(--red);
 
-        button {
+        .Top__btn {
             height: 100%;
-            transition: opacity 0Top__5s ease;
+            transition: opacity 0.5s ease;
+            padding: 16px 26px;
 
             &:hover {
-                opacity: 0Top__6;
+                opacity: 0.6;
             }
         }
     }

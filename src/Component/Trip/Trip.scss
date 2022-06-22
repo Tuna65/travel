@@ -1,0 +1,120 @@
+.Trip__wrapper {
+    margin-top: 100px;
+    width: 100%;
+
+    .Trip__inner {
+        max-width: 1140px;
+        padding: 0 15px;
+        margin: auto;
+    }
+}
+
+.Trip__banner {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .Trip__img > img {
+        transform: scale(1.3);
+    }
+
+    .Trip__img {
+        img {
+            width: 100%;
+            transition: transform 10s linear;
+        }
+    }
+
+    .Trip__contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        z-index: 4;
+        bottom: 38%;
+        left: 5px;
+        background-color: var(--white);
+        border-radius: 10px;
+        padding: 12px 22px;
+        align-items: center;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+        cursor: pointer;
+
+        .Trip__contact-title {
+            font-size: 12px;
+            color: var(--text-color);
+            line-height: 20px;
+        }
+
+        .Trip__contact-phone {
+            color: var(--black);
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .Trip__deal {
+        position: absolute;
+        top: 9%;
+        right: 0%;
+        padding: 12px 22px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        cursor: pointer;
+
+        .Trip__deal-percent {
+            font-family: 'reey';
+            font-size: 75px;
+            color: var(--red);
+            line-height: 60px;
+            margin-bottom: 12px;
+        }
+
+        .Trip__deal-note {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 50px;
+            opacity: 0.8;
+        }
+    }
+}
+
+.Trip__description {
+    display: flex;
+    flex-direction: column;
+
+    .Trip__description-paragraph {
+        margin-top: 30px;
+        color: var(--text-color);
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .Trip__description-list {
+        display: flex;
+        flex-direction: column;
+
+        .Trip__description-list-content {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+
+            svg {
+                margin-right: 16px;
+                color: var(--red);
+            }
+        }
+    }
+}
+.Trip__description-btn {
+    display: block;
+    padding: 18px 30px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 30px;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+        background-color: var(--black);
+    }
+}

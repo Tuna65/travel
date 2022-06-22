@@ -1,0 +1,45 @@
+.FeatureTour__wrapper {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+
+    .FeatureTour__inner {
+        max-width: 1600px;
+        margin: auto;
+
+        .FeatureTour__title {
+            text-align: center;
+        }
+
+        .FeatureTour__list {
+            margin-top: 50px;
+        }
+    }
+}
+
+.FeatureTour__mySwiper {
+    &:hover .swiper-button-next:after,
+    &:hover .swiper-button-prev:after {
+        transform: scale(1);
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 18px;
+        color: var(--black);
+        font-weight: bold;
+        padding: 18px 20px;
+        background-color: var(--white);
+        box-shadow: 4px 1px 10px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.5s ease;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: var(--orange);
+    }
+
+    .swiper-pagination-bullet-active {
+        transform: scale(1.5);
+    }
+}

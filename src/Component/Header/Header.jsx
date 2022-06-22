@@ -2,7 +2,7 @@ import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import logo from './../../img/logo.png';
+import logo from '../../assets/img/logo.png';
 
 function Header() {
     return (

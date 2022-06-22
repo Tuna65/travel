@@ -6,7 +6,7 @@ html {
 
 @font-face {
     font-family: reey;
-    src: url('./Font/Reey-Regular.otf');
+    src: url('./assets/Font/Reey-Regular.otf');
 }
 
 :root {
@@ -17,6 +17,7 @@ html {
     --bg-element: #faf5ee;
     --orange: #ffa801;
     --text-colord9: #9d9d9d;
+    --blue: #006cfa;
 }
 
 * {
@@ -35,12 +36,16 @@ html {
     min-height: 100vh;
 }
 
-button {
+.btn {
     color: var(--white);
     background-color: var(--red);
-    padding: 16px 26px;
     font-size: 11px;
     letter-spacing: 0.5px;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
 }

@@ -29,7 +29,7 @@ function Top() {
                             <FontAwesomeIcon icon={faPinterest} />
                         </div>
                         <div className="Top__right-btn">
-                            <button>BECOME A LOCAL GUIDE</button>
+                            <button className="btn Top__btn">BECOME A LOCAL GUIDE</button>
                         </div>
                     </div>
                 </div>
