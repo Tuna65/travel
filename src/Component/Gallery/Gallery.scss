@@ -1,16 +1,19 @@
-.Gallery__container {
+.Gallery__wrapper {
     width: 100%;
     background-image: url('./../../assets/img/bg-map.png');
-    padding-top: 200px;
+    padding-top: 250px;
     background-color: #faf5ee;
+    padding-bottom: 100px;
 
     .Gallery__inner {
         max-width: 1600px;
         margin: auto;
-        padding: 0 15px;
         position: relative;
 
         .Gallery__mySwiper {
+            margin: 0 30px;
+            overflow: hidden;
+
             .swiper-button-next:after,
             .swiper-button-prev:after {
                 color: var(--black);
@@ -31,6 +34,54 @@
     }
 }
 
-.Gallery__img {
-    width: 100%;
+.Gallery__container {
+    position: relative;
+    .Gallery__container-img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    &:hover .Gallery__container-blur,
+    &:hover .Gallery__container-content {
+        opacity: 1;
+    }
+
+    .Gallery__container-blur {
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .Gallery__container-content {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        display: block;
+        margin: auto;
+        z-index: 2;
+        text-align: center;
+        color: var(--white);
+        font-size: 22px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        .Gallery__container-content-type {
+            display: block;
+            font-family: 'reey';
+            font-size: 24px;
+            color: var(--red);
+            font-weight: 100;
+            margin-top: 12px;
+        }
+    }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import img1 from './../../assets/img/gallery-1.jpg';
@@ -13,26 +13,52 @@ import img4 from './../../assets/img/gallery-4.jpg';
 import img5 from './../../assets/img/gallery-5.jpg';
 
 function Gallery() {
+    const gallerys = [
+        {
+            path: img1,
+            type: 'wildlife',
+        },
+        {
+            path: img2,
+            type: 'Adventure',
+        },
+        {
+            path: img3,
+            type: 'Hang Gliding',
+        },
+        {
+            path: img4,
+            type: 'Sightseeing',
+        },
+        {
+            path: img5,
+            type: 'Adventure',
+        },
+    ];
+
     return (
-        <div className="Gallery__container">
+        <div className="Gallery__wrapper">
             <div className="Gallery__inner">
                 <Swiper
                     slidesPerView={5}
-                    spaceBetween={30}
+                    spaceBetween={10}
                     loop={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
                     navigation={true}
-                    modules={[Pagination, Autoplay, Navigation]}
+                    modules={[Pagination, Navigation]}
                     className="Gallery__mySwiper"
                 >
-                    <SwiperSlide>
-                        <div>
-                            <img src={img1} alt="" className="Gallery__img" />
-                        </div>
-                    </SwiperSlide>
+                    {gallerys.map((item, index) => (
+                        <SwiperSlide>
+                            <div className="Gallery__container" key={index}>
+                                <img src={item.path} alt="" className="Gallery__container-img" />
+                                <span className="Gallery__container-blur"></span>
+                                <span className="Gallery__container-content">
+                                    Discovery Islands{' '}
+                                    <span className="Gallery__container-content-type">{item.type}</span>
+                                </span>
+                            </div>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </div>
