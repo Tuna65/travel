@@ -1,0 +1,52 @@
+.MemberRate__wrapper {
+    width: 100%;
+
+    .MemberRate__inner {
+        text-align: center;
+
+        .MemberRate__img {
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .MemberRate__container {
+            padding: 50px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            background-color: var(--white);
+
+            .MemberRate__rate {
+                display: flex;
+                justify-content: center;
+
+                svg {
+                    color: #f7931e;
+                    margin: 0 2px 12px;
+                }
+            }
+
+            p {
+                color: var(--text-color);
+                font-size: 18px;
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+
+            .MemberRate__name {
+                font-size: 20px;
+                color: var(--black);
+                font-weight: 600;
+                line-height: 30px;
+            }
+            .MemberRate__title {
+                letter-spacing: 1px;
+                color: var(--red);
+                font-size: 14px;
+                display: inline-block;
+                margin-top: 12px;
+            }
+        }
+    }
+}

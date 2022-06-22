@@ -1,0 +1,36 @@
+.Partners__wrapper {
+    background-image: url('./../../assets/img/bg-line.png');
+    background-size: cover;
+    background-color: var(--red);
+    width: 100%;
+
+    .Partners__inner {
+        max-width: 1140px;
+        margin: auto;
+    }
+}
+
+.Partners__left {
+    padding: 90px 0;
+
+    .Partners__left-text {
+        font-size: 36px;
+        color: var(--white);
+        font-weight: 800;
+    }
+}
+
+.Partners__right {
+    display: flex;
+    align-items: center;
+
+    .Partners__right-img {
+        opacity: 0.5;
+        transition: opacity 0.5s linear, transform 0.3s linear;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(0.8);
+        }
+    }
+}

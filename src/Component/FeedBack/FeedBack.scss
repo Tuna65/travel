@@ -1,0 +1,47 @@
+.FeedBack__wrapper {
+    width: 100%;
+    background-image: url('./../../assets/img/bg-plane-bird.png');
+    background-repeat: no-repeat;
+    height: 600px;
+    max-width: 1600px;
+    margin: 100px auto 0;
+
+    .FeedBack__inner {
+        max-width: 1140px;
+        margin: auto;
+
+        .FeedBack__title {
+            text-align: center;
+        }
+    }
+}
+
+.FeedBack__container {
+    position: relative;
+    top: 85px;
+
+    .FeedBack__mySwiper {
+        .swiper-slide {
+            padding: 0 24px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            color: var(--black);
+            font-weight: bold;
+            font-size: 18px;
+            padding: 14px 18px;
+            background-color: var(--white);
+            border-radius: 50%;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+            z-index: 15;
+            transform: scale(0);
+            transition: transform 0.8s linear;
+        }
+
+        &:hover .swiper-button-next:after,
+        &:hover .swiper-button-prev:after {
+            transform: scale(1);
+        }
+    }
+}
