@@ -1,0 +1,144 @@
+.Contact__wrapper {
+    background: #272634;
+    background-image: url('./../../assets/img/bg-map-2.png');
+    background-repeat: no-repeat;
+    background-position: right;
+
+    .Contact__inner {
+        max-width: 1140px;
+        margin: auto;
+        padding: 100px 0 100px;
+    }
+}
+.Contact__contact {
+    color: var(--text-color3);
+    font-weight: 500;
+    .Contact__contact-img {
+        margin-bottom: 16px;
+        img {
+            max-width: 130px;
+        }
+    }
+
+    .Contact__contact-item {
+        > * {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+
+            svg {
+                color: var(--red);
+                font-size: 10px;
+                color: var(--black);
+                background-color: var(--red);
+                padding: 1px;
+                min-width: 12px;
+                margin-right: 12px;
+            }
+        }
+
+        > :nth-child(3) {
+            width: 100%;
+            background-color: #5a5967;
+            padding: 0;
+            height: 1px;
+        }
+
+        .contact-Contact,
+        .contact-Contact {
+            transition: color 0.1s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+    }
+}
+
+.Contact__item {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color3);
+    font-weight: 500;
+
+    .Contact__item-type {
+        color: var(--white);
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .Contact__item-list {
+        > * {
+            margin: 11px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.Contact__newsletter {
+    .Contact__newsletter-container {
+        padding: 0 30px 0 0;
+
+        .Contact__newsletter-type {
+            font-size: 20px;
+            color: var(--white);
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .Contact__newsletter-form {
+            display: flex;
+            flex-direction: column;
+
+            .Contact__newsletter-email {
+                background-color: #272634;
+                color: var(--text-color3);
+                font-weight: 500;
+                margin: 12px 0;
+            }
+
+            .Contact__newsletter-submit {
+                background-color: var(--red);
+                font-size: 11px;
+                letter-spacing: 2px;
+                color: var(--white);
+                transition: opacity 0.4s ease;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .Contact__newsletter-check {
+            display: flex;
+            align-items: center;
+            color: var(--text-color3);
+            font-size: 16px;
+            margin-top: 24px;
+            font-weight: 500;
+
+            svg {
+                margin-right: 20px;
+            }
+
+            span {
+                transition: color 0.5s ease;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--red);
+                }
+            }
+        }
+    }
+}

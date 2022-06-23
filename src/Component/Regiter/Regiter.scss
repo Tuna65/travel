@@ -1,0 +1,67 @@
+.Regiter__wrapper {
+    width: 100%;
+    background-image: url('./../../assets/img/bg-line-2.png');
+    background-position: center;
+    background-color: #fbf8f2;
+    overflow: hidden;
+
+    .Regiter__inner {
+        max-width: 1140px;
+        margin: auto;
+        padding: 120px 0 0;
+    }
+}
+
+.Regiter__left {
+    display: flex;
+    flex-direction: column;
+    .Regiter__title {
+        position: relative;
+    }
+    .Regiter__description {
+        position: relative;
+        color: var(--text-color);
+        line-height: 30px;
+        padding: 20px 0;
+    }
+
+    .Regiter__btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .btn {
+            padding: 18px 30px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            background-color: #fc3c3c;
+            border-radius: 6px;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+
+            svg {
+                margin-right: 12px;
+            }
+        }
+
+        .Regiter__btn-log {
+            margin-right: 24px;
+        }
+
+        .Regiter__btn-regiter {
+            color: var(--black);
+            background-color: var(--white);
+        }
+    }
+}
+
+.Regiter__right {
+    padding-left: 80px;
+
+    .Regiter__right-img {
+        position: relative;
+    }
+}

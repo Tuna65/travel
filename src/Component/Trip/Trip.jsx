@@ -1,4 +1,5 @@
 import './Trip.scss';
+import { motion } from 'framer-motion';
 import img from './../../assets/img/image-6.jpg';
 import Title from '../Title/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,30 +13,60 @@ function Trip() {
                     <div className="row">
                         <div className="col l-6">
                             <div className="Trip__banner">
-                                <div className="Trip__img">
+                                <motion.div
+                                    className="Trip__img"
+                                    initial={{ transform: 'scale(0)' }}
+                                    whileInView={{ transform: 'scale(1)' }}
+                                    transiton={{ duration: 2, type: 'spring' }}
+                                >
                                     <img src={img} alt="" />
-                                </div>
-                                <div className="Trip__contact">
+                                </motion.div>
+                                <motion.div
+                                    className="Trip__contact"
+                                    initial={{ transform: 'scale(0)' }}
+                                    whileInView={{ transform: 'scale(1)' }}
+                                    transiton={{ duration: 2, type: 'spring' }}
+                                >
                                     <span className="Trip__contact-title">BOOK TOUR NOW</span>
                                     <span className="Trip__contact-phone">66668888</span>
-                                </div>
-                                <div className="Trip__deal">
+                                </motion.div>
+                                <motion.div
+                                    className="Trip__deal"
+                                    initial={{ transform: 'scale(0)' }}
+                                    whileInView={{ transform: 'scale(1)' }}
+                                    transiton={{ duration: 2, type: 'spring' }}
+                                >
                                     <span className="Trip__deal-percent">30%</span>
                                     <span className="Trip__deal-note">Discount</span>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                         <div className="col l-6">
-                            <div className="Trip__title">
+                            <motion.div
+                                className="Trip__title"
+                                initial={{ top: '20%' }}
+                                whileInView={{ top: '0%' }}
+                                transition={{ duration: 1, type: 'spring' }}
+                            >
                                 <Title type="Get to know us" note="Plan Your Trip with Trevily" />
-                            </div>
+                            </motion.div>
                             <div className="Trip__description">
-                                <p className="Trip__description-paragraph">
+                                <motion.p
+                                    className="Trip__description-paragraph"
+                                    initial={{ top: '50px' }}
+                                    whileInView={{ top: '0px' }}
+                                    transition={{ duration: 1, type: 'spring' }}
+                                >
                                     There are many variations of passages of available but the majority have suffered
                                     alteration in some form, by injected hum randomised words which don't look even
                                     slightly.
-                                </p>
-                                <div className="Trip__description-list">
+                                </motion.p>
+                                <motion.div
+                                    className="Trip__description-list"
+                                    initial={{ top: '50px' }}
+                                    whileInView={{ top: '0px' }}
+                                    transition={{ duration: 1, type: 'spring', delay: 0.3 }}
+                                >
                                     <span className="Trip__description-list-content">
                                         <FontAwesomeIcon icon={faCircleCheck} />
                                         Invest in your simply neighborhood
@@ -48,9 +79,16 @@ function Trip() {
                                         <FontAwesomeIcon icon={faCircleCheck} />
                                         Largest global industrial business
                                     </span>
-                                </div>
+                                </motion.div>
                             </div>
-                            <button className="Trip__description-btn btn">BOOK WITH US NOW</button>
+                            <motion.button
+                                className="Trip__description-btn btn"
+                                initial={{ top: '50px' }}
+                                whileInView={{ top: '0px' }}
+                                transition={{ duration: 1, type: 'spring', delay: 0.3 }}
+                            >
+                                BOOK WITH US NOW
+                            </motion.button>
                         </div>
                     </div>
                 </div>

@@ -79,6 +79,10 @@
     }
 }
 
+.Trip__title {
+    position: relative;
+}
+
 .Trip__description {
     display: flex;
     flex-direction: column;
@@ -88,9 +92,11 @@
         color: var(--text-color);
         line-height: 30px;
         margin-bottom: 30px;
+        position: relative;
     }
 
     .Trip__description-list {
+        position: relative;
         display: flex;
         flex-direction: column;
 
@@ -113,6 +119,7 @@
     font-weight: 700;
     margin-top: 30px;
     transition: background-color 0.3s linear;
+    position: relative;
 
     &:hover {
         background-color: var(--black);

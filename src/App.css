@@ -12,11 +12,12 @@ html {
 :root {
     --white: #fff;
     --text-color: #757783;
+    --text-colord9: #9d9d9d;
+    --text-color3: #a9a8b6;
     --black: #313041;
     --red: #e8604c;
     --bg-element: #faf5ee;
     --orange: #ffa801;
-    --text-colord9: #9d9d9d;
     --blue: #006cfa;
 }
 
@@ -48,4 +49,20 @@ html {
 
 ul {
     list-style: none;
+}
+
+.input {
+    padding: 24px 30px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+::placeholder {
+    color: var(--text-color3);
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }

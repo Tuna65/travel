@@ -6,7 +6,7 @@ import logo from '../../assets/img/logo.png';
 
 function Header() {
     return (
-        <div className="Header__wrapper">
+        <div className="Header__wrapper" id="Header">
             <div className="Header__inner">
                 <div className="Header__navbar">
                     <div className="Header__img">

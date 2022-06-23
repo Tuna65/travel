@@ -1,5 +1,6 @@
 import { faJedi, faPersonSkating, faPersonWalking, faPlaneDeparture, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 import Title from '../Title/Title';
 import './Description.scss';
 
@@ -29,9 +30,14 @@ function Description() {
                 <div className="grid">
                     <div className="row">
                         <div className="col l-7 Description__left ">
-                            <div className="Description__link">
+                            <motion.div
+                                className="Description__link"
+                                initial={{ right: '30%' }}
+                                whileInView={{ right: '0%' }}
+                                transition={{ duration: 1.5, type: 'spring' }}
+                            >
                                 <FontAwesomeIcon icon={faPlay} />
-                            </div>
+                            </motion.div>
                             <div className="Description__title">
                                 <Title
                                     type="Are you ready to travel?"
@@ -41,7 +47,12 @@ function Description() {
                         </div>
                         <div className="col l-5 Description__right">
                             {dataTrip.map((item, index) => (
-                                <div className="Description__right-inner">
+                                <motion.div
+                                    className="Description__right-inner"
+                                    initial={{ transform: 'scale(0)' }}
+                                    whileInView={{ transform: 'scale(1)' }}
+                                    transition={{ duration: 1.5, type: 'spring' }}
+                                >
                                     <div className="Description__right-container" key={index}>
                                         <div className="Description__right-icon">
                                             <FontAwesomeIcon icon={item.path} />
@@ -51,7 +62,7 @@ function Description() {
                                             Tour
                                         </span>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>

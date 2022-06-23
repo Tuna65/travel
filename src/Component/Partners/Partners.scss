@@ -10,6 +10,11 @@
     }
 }
 
+.FeedBack__title,
+.FeedBack__mySwiper-card {
+    position: relative;
+}
+
 .Partners__left {
     padding: 90px 0;
 
@@ -17,6 +22,7 @@
         font-size: 36px;
         color: var(--white);
         font-weight: 800;
+        position: relative;
     }
 }
 
@@ -33,4 +39,8 @@
             transform: scale(0.8);
         }
     }
+}
+
+.partners__image {
+    position: relative;
 }

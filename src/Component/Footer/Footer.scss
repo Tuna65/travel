@@ -1,0 +1,82 @@
+.Footer__wrapper {
+    background-color: var(--black);
+    display: block;
+    height: auto;
+
+    .Footer__inner {
+        .Footer__container {
+            max-width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--white);
+            border-top-left-radius: 14px;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                left: 100%;
+                width: 400px;
+                background-color: var(--white);
+            }
+
+            .Footer__left {
+                display: flex;
+                align-items: center;
+
+                .icon__up-top {
+                    display: block;
+                    padding: 40px 48px;
+                    color: var(--white);
+                    background-color: var(--red);
+                    font-weight: bold;
+                    border-top-left-radius: 12px;
+                    cursor: pointer;
+
+                    svg {
+                        font-size: 24px;
+                    }
+                }
+
+                .Footer__icon {
+                    margin-left: 8px;
+
+                    span {
+                        svg {
+                            padding: 15px 16px;
+                            margin: 0 4px;
+                            border-radius: 50%;
+                            background-color: var(--bg-element);
+                            cursor: pointer;
+                        }
+
+                        &:hover svg {
+                            animation: zoom 0.3s ease;
+                            color: var(--white);
+                            background-color: var(--red);
+                        }
+                        @keyframes zoom {
+                            from {
+                                transform: scale(1);
+                            }
+                            to {
+                                transform: scale(0.8);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Footer__note {
+                font-weight: 500;
+                color: var(--text-color);
+            }
+        }
+    }
+}

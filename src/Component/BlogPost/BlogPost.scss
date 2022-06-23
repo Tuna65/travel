@@ -1,0 +1,70 @@
+.BlogPost__wrapper {
+    width: 100%;
+    background-color: var(--white);
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    .BlogPost__inner {
+        max-width: 1140px;
+        margin: auto;
+        padding: 0 15px;
+
+        .BlogPost__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .BlogPost__title-motion {
+                position: relative;
+            }
+
+            .BlogPost__btn {
+                padding: 20px 20px;
+                width: 220px;
+                transition: color 0.5s ease, background-color 0.5s ease;
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 11px;
+                position: relative;
+
+                &:hover {
+                    color: var(--white);
+                    background-color: var(--black);
+                }
+            }
+        }
+
+        .BlogPost__mySwiper {
+            .BlogPost__mySwiper-card {
+                position: relative;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                background-color: var(--white);
+                border-radius: 50%;
+                color: var(--black);
+                box-shadow: 1px 5px 2px 0 rgba(0, 0, 0, 0.2);
+                padding: 10px 20px;
+                transform: scale(0);
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    background-color: #f0e3e1;
+                    color: var(--red);
+                }
+            }
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 14px;
+                font-weight: bold;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover .swiper-button-prev,
+            &:hover .swiper-button-next {
+                transform: scale(1);
+            }
+        }
+    }
+}

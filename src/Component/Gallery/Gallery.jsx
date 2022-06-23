@@ -5,6 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
 
 import img1 from './../../assets/img/gallery-1.jpg';
 import img2 from './../../assets/img/gallery-2.jpg';
@@ -49,14 +50,20 @@ function Gallery() {
                 >
                     {gallerys.map((item, index) => (
                         <SwiperSlide>
-                            <div className="Gallery__container" key={index}>
+                            <motion.div
+                                className="Gallery__container"
+                                key={index}
+                                initial={{ top: '50px', opacity: 0 }}
+                                whileInView={{ top: '0px', opacity: 1 }}
+                                transition={{ duration: 1, type: 'spring' }}
+                            >
                                 <img src={item.path} alt="" className="Gallery__container-img" />
                                 <span className="Gallery__container-blur"></span>
                                 <span className="Gallery__container-content">
                                     Discovery Islands{' '}
                                     <span className="Gallery__container-content-type">{item.type}</span>
                                 </span>
-                            </div>
+                            </motion.div>
                         </SwiperSlide>
                     ))}
                 </Swiper>

@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper';
+import { motion } from 'framer-motion';
 
 import MemberRate from '../MemberRate/MemberRate';
 import Title from '../Title/Title';
@@ -49,9 +50,14 @@ function FeedBack() {
     return (
         <div className="FeedBack__wrapper">
             <div className="FeedBack__inner">
-                <div className="FeedBack__title">
+                <motion.div
+                    className="FeedBack__title"
+                    initial={{ top: '100px' }}
+                    whileInView={{ top: '0px' }}
+                    transition={{ duration: 2, type: 'spring' }}
+                >
                     <Title type="Testimonials & reviews" note="What They’re Saying" />
-                </div>
+                </motion.div>
                 <div className="FeedBack__container">
                     <Swiper
                         slidesPerView={3}
@@ -66,13 +72,20 @@ function FeedBack() {
                         className="FeedBack__mySwiper"
                     >
                         {dataMember.map((item, index) => (
-                            <SwiperSlide>
-                                <MemberRate
-                                    path={item.path}
-                                    paragraph={item.paragraph}
-                                    name={item.name}
-                                    rate={item.title}
-                                />
+                            <SwiperSlide key={index}>
+                                <motion.div
+                                    className="FeedBack__mySwiper-card"
+                                    initial={{ top: '50px', opacity: 0 }}
+                                    whileInView={{ top: '0px', opacity: 1 }}
+                                    transition={{ duration: 2, type: 'spring' }}
+                                >
+                                    <MemberRate
+                                        path={item.path}
+                                        paragraph={item.paragraph}
+                                        name={item.name}
+                                        rate={item.title}
+                                    />
+                                </motion.div>
                             </SwiperSlide>
                         ))}
                     </Swiper>

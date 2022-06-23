@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -22,7 +23,14 @@ function Partners() {
                 <div className="grid">
                     <div className="row">
                         <div className="col l-4 Partners__left">
-                            <span className="Partners__left-text">Our Partners</span>
+                            <motion.span
+                                className="Partners__left-text"
+                                initial={{ right: '30%' }}
+                                whileInView={{ right: '0%' }}
+                                transition={{ duration: 1.5, type: 'spring' }}
+                            >
+                                Our Partners
+                            </motion.span>
                         </div>
                         <div className="col l-8 Partners__right">
                             <Swiper
@@ -38,7 +46,14 @@ function Partners() {
                             >
                                 {images.map((img, index) => (
                                     <SwiperSlide key={index}>
-                                        <img src={img} alt="" className="Partners__right-img" />
+                                        <motion.div
+                                            className="partners__image"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            transition={{ duration: 2, type: 'spring' }}
+                                        >
+                                            <img src={img} alt="" className="Partners__right-img" />
+                                        </motion.div>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>

@@ -1,4 +1,5 @@
 import './Benefit.scss';
+import { motion } from 'framer-motion';
 
 import Title from '../Title/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,14 +13,29 @@ function Benefit() {
                     <div className="row">
                         <div className="col l-5 c-12 Benefit__left"></div>
                         <div className="col l-7 c-12 Benefit__right">
-                            <div className="Benefit__right-title">
+                            <motion.div
+                                className="Benefit__right-title"
+                                initial={{ top: '100px' }}
+                                whileInView={{ top: '0px' }}
+                                transition={{ duration: 2, type: 'spring' }}
+                            >
                                 <Title type="Our benefit lists" note="Why Choose Tevily" />
-                            </div>
-                            <p>
+                            </motion.div>
+                            <motion.p
+                                className="Benefit__right-paragraph"
+                                initial={{ top: '100px' }}
+                                whileInView={{ top: '0px' }}
+                                transition={{ duration: 2, type: 'spring' }}
+                            >
                                 There are many variations of passages of Lorem Ipsum is simply free text available in
                                 the market for you, but the majority have suffered alteration in some form.
-                            </p>
-                            <div className="Benefit__right-container">
+                            </motion.p>
+                            <motion.div
+                                className="Benefit__right-container"
+                                initial={{ top: '100px' }}
+                                whileInView={{ top: '0px' }}
+                                transition={{ duration: 2, type: 'spring' }}
+                            >
                                 <div className="Benefit__right-container-content">
                                     <FontAwesomeIcon icon={faPersonWalking} />
                                     <div className="Benefit__right-content-description">
@@ -40,7 +56,7 @@ function Benefit() {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
