@@ -1,5 +1,6 @@
 import './Gallery.scss';
-import React from 'react';
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -12,6 +13,7 @@ import img2 from './../../assets/img/gallery-2.jpg';
 import img3 from './../../assets/img/gallery-3.jpg';
 import img4 from './../../assets/img/gallery-4.jpg';
 import img5 from './../../assets/img/gallery-5.jpg';
+import GalleryLayout from './GalleryLayout/GalleryLayout';
 
 function Gallery() {
     const gallerys = [
@@ -37,6 +39,8 @@ function Gallery() {
         },
     ];
 
+    const container = useRef();
+
     return (
         <div className="Gallery__wrapper">
             <div className="Gallery__inner">
@@ -49,13 +53,16 @@ function Gallery() {
                     className="Gallery__mySwiper"
                 >
                     {gallerys.map((item, index) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <motion.div
                                 className="Gallery__container"
-                                key={index}
                                 initial={{ top: '50px', opacity: 0 }}
                                 whileInView={{ top: '0px', opacity: 1 }}
                                 transition={{ duration: 1, type: 'spring' }}
+                                onClick={() => {
+                                    const root = createRoot(container.current);
+                                    root.render(<GalleryLayout number={index} />);
+                                }}
                             >
                                 <img src={item.path} alt="" className="Gallery__container-img" />
                                 <span className="Gallery__container-blur"></span>
@@ -68,6 +75,7 @@ function Gallery() {
                     ))}
                 </Swiper>
             </div>
+            <div className="GalleryLayout__layout" ref={container}></div>
         </div>
     );
 }

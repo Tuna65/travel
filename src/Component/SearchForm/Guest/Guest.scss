@@ -1,0 +1,59 @@
+.Guest__wrapper {
+    position: absolute;
+    top: 20px;
+    background-color: var(--white);
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    width: 240px;
+    left: -45px;
+
+    .Guest__inner {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
+        align-items: center;
+        margin: 12px 12px;
+        padding: 12px 0;
+
+        .Guest__type {
+            display: flex;
+
+            > :first-child {
+                color: var(--black);
+                font-weight: 800;
+                font-size: 16px;
+                margin-right: 20px;
+            }
+        }
+
+        .Guest__option {
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 8px;
+
+            svg {
+                padding: 6px 7px;
+                color: white;
+                background-color: var(--black);
+                margin: 0 4px;
+                font-weight: 800;
+                font-size: 14px;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--red);
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
+    .Guest__btn {
+        display: block;
+        margin: auto;
+        border-radius: 8px;
+        padding: 12px 26px;
+        margin-bottom: 12px;
+    }
+}

@@ -1,0 +1,47 @@
+.Destinations__wrapper {
+    overflow-y: scroll;
+    height: 250px;
+    width: 230px;
+    position: absolute;
+    top: 20px;
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 12px 12px 0;
+    background-color: var(--white);
+    z-index: 5;
+
+    > * {
+        margin-bottom: 12px;
+    }
+
+    .Destinations__detail,
+    .Acivity__title {
+        span {
+            color: var(--black);
+            font-weight: 800;
+        }
+    }
+
+    .Destinations__continent,
+    .Acivity__types {
+        margin-left: 10px;
+
+        > * {
+            padding: 6px 10px;
+            color: var(--text-color);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--black);
+                background-color: #faf8f4;
+            }
+        }
+    }
+
+    .Destinations__continent {
+        .active {
+            background-color: #cbcbcb;
+            color: var(--black);
+        }
+    }
+}

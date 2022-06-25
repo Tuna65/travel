@@ -52,6 +52,7 @@ function Description() {
                                     initial={{ transform: 'scale(0)' }}
                                     whileInView={{ transform: 'scale(1)' }}
                                     transition={{ duration: 1.5, type: 'spring' }}
+                                    key={index}
                                 >
                                     <div className="Description__right-container" key={index}>
                                         <div className="Description__right-icon">

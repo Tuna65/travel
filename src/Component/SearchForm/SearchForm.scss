@@ -16,11 +16,13 @@
         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 
         .search-form__inner-items {
-            display: flex;
-            align-items: center;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-            padding-bottom: 12px;
-            cursor: pointer;
+            .search-form-container {
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+                padding-bottom: 12px;
+                cursor: pointer;
+            }
 
             .inner-items-container {
                 display: flex;
@@ -76,4 +78,9 @@
             }
         }
     }
+}
+
+.inner-item-container {
+    position: absolute;
+    z-index: 5;
 }

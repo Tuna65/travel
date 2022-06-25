@@ -108,7 +108,7 @@ function FeatureTour() {
                             disableOnInteraction: false,
                         }}
                         pagination={{
-                            clickable: true,
+                            dynamicBullets: true,
                         }}
                         navigation={true}
                         modules={[Autoplay, Pagination, Navigation]}
@@ -116,33 +116,9 @@ function FeatureTour() {
                     >
                         {dataTours.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <CardTour
-                                    path={item.path}
-                                    name={item.name}
-                                    location={item.location}
-                                    price={item.price}
-                                    day={item.day}
-                                    numberOfMembers={item.numberOfMembers}
-                                    isFeatured={item.isFeatured}
-                                    rate={item.rate}
-                                    amount={item.amount}
-                                    numberCamera={item.numberCamera}
-                                />
+                                <CardTour {...item} />
                             </SwiperSlide>
                         ))}
-
-                        {/* <SwiperSlide>
-                            <CardTour />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <CardTour />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <CardTour />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <CardTour />
-                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>

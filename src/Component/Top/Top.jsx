@@ -6,7 +6,7 @@ import './Top.scss';
 
 function Top() {
     return (
-        <div className="Top__wrapper">
+        <div className="Top__wrapper" id="Header">
             <div className="Top__inner">
                 <div className="Top__left">
                     <div className="Top__inner-left">

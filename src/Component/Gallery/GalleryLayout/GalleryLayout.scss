@@ -1,0 +1,44 @@
+.GalleryLayout__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+
+    .GalleryLayout__inner {
+        max-width: 1600px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .GalleryLayout__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 12px;
+        margin-top: 12px;
+
+        > * {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: bold;
+            padding: 500px 100px;
+            padding: 20px 12px;
+            cursor: pointer;
+        }
+    }
+}
+
+.GalleryLayout__mySwiper {
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        color: var(--white);
+        font-size: 14px;
+        font-weight: bold;
+        padding: 500px 100px;
+    }
+}

@@ -17,6 +17,28 @@ import SearchForm from './Component/SearchForm/SearchForm';
 import Top from './Component/Top/Top';
 import Trip from './Component/Trip/Trip';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: 'AIzaSyBxvB7GxQlej3YNChOzT3EgPl-TADP7Qdg',
+    authDomain: 'travel-web-a946f.firebaseapp.com',
+    projectId: 'travel-web-a946f',
+    storageBucket: 'travel-web-a946f.appspot.com',
+    messagingSenderId: '398319883266',
+    appId: '1:398319883266:web:ea2573967aabf83437c31b',
+    measurementId: 'G-DQVXKKFBTN',
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 function App() {
     return (
         <div className="App">

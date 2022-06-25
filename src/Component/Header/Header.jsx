@@ -1,12 +1,26 @@
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faMagnifyingGlass, faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../../assets/img/logo.png';
+import { useState } from 'react';
 
 function Header() {
+    const [isSearch, setIsSearch] = useState(false);
+    const [isUser, setIsUser] = useState(false);
+    const [isHeaderPosition, setIsHeaderPosition] = useState(false);
+
+    window.onscroll = () => {
+        if (window.scrollY > 10) {
+            setIsHeaderPosition(true);
+        } else setIsHeaderPosition(false);
+    };
+
     return (
-        <div className="Header__wrapper" id="Header">
+        <div
+            className="Header__wrapper"
+            style={isHeaderPosition ? { position: 'fixed', top: 0 } : { position: 'relative' }}
+        >
             <div className="Header__inner">
                 <div className="Header__navbar">
                     <div className="Header__img">
@@ -68,8 +82,54 @@ function Header() {
                 </div>
                 <div className="Header__elementor">
                     <div className="Header__icon">
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        <FontAwesomeIcon icon={faUser} />
+                        <div className="Header__icon-search ">
+                            <span
+                                className={isSearch ? 'active H_search' : 'H_search'}
+                                onClick={() => {
+                                    setIsSearch((prev) => !prev);
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </span>
+                            <div
+                                className="Header__icon-search-form"
+                                style={
+                                    isSearch
+                                        ? { transform: 'scale(1)', transformOrigin: ' top' }
+                                        : { transform: 'scale(0)', transformOrigin: 'top' }
+                                }
+                            >
+                                <input type="text" name="" id="" className="search-input" placeholder="Search..." />
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </div>
+                        </div>
+                        <div className="Header__icon-user">
+                            <span
+                                className={isUser ? 'active H_user' : 'H_user'}
+                                onClick={() => {
+                                    setIsUser((prev) => !prev);
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faUser} />
+                            </span>
+                            <div
+                                className="Header__icon-user-form"
+                                style={
+                                    isUser
+                                        ? { transform: 'scale(1)', transformOrigin: ' top' }
+                                        : { transform: 'scale(0)', transformOrigin: 'top' }
+                                }
+                            >
+                                <div className="Header__login">
+                                    <FontAwesomeIcon icon={faUser} />
+                                    <span>Login</span>
+                                </div>
+                                <div className="Header__register">
+                                    <FontAwesomeIcon icon={faUserPlus} />
+                                    <span>Register</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
