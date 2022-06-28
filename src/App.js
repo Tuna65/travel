@@ -1,21 +1,17 @@
 import './App.css';
 import './assets/Grid/Grid.css';
-import Banner from './Component/Banner/Banner';
-import Benefit from './Component/Benefit/Benefit';
-import BlogPost from './Component/BlogPost/BlogPost';
+import { Routes, Route } from 'react-router-dom';
+
 import Contact from './Component/Contact/Contact';
-import Description from './Component/Description/Description';
-import DestinationList from './Component/DestinationList/DestinationList';
-import FeatureTour from './Component/FeatureTour/FeatureTour';
-import FeedBack from './Component/FeedBack/FeedBack';
 import Footer from './Component/Footer/Footer';
-import Gallery from './Component/Gallery/Gallery';
 import Header from './Component/Header/Header';
-import Partners from './Component/Partners/Partners';
-import Regiter from './Component/Regiter/Regiter';
-import SearchForm from './Component/SearchForm/SearchForm';
 import Top from './Component/Top/Top';
-import Trip from './Component/Trip/Trip';
+import HomePage from './Page/HomePage';
+import TourPage from './Page/TourPage';
+import DestinationPage from './Page/DestinationPage/DestinationPage';
+import NewsPage from './Page/NewsPage/NewsPage';
+import ContactPage from './Page/ContactPage/ContactPage';
+import PostPage from './Page/PostPage/PostPage';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
@@ -44,18 +40,18 @@ function App() {
         <div className="App">
             <Top />
             <Header />
-            <Banner />
-            <SearchForm />
-            <DestinationList />
-            <Trip />
-            <FeatureTour />
-            <Description />
-            <Partners />
-            <FeedBack />
-            <Gallery />
-            <Benefit />
-            <BlogPost />
-            <Regiter />
+            {/* ========== */}
+
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/tour" element={<TourPage />} />
+                <Route path="/destination" element={<DestinationPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/posts" element={<PostPage />} />
+            </Routes>
+
+            {/* ========== */}
             <Contact />
             <Footer />
         </div>

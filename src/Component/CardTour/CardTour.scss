@@ -1,6 +1,4 @@
 .CardTour__wrapper {
-    padding: 12px 15px;
-
     .CardTour__inner {
         position: relative;
 
@@ -203,7 +201,7 @@
 
     svg {
         border: none;
-        color: var(--red);
+        cursor: pointer;
         font-size: 16px;
     }
 }

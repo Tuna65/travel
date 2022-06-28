@@ -9,9 +9,12 @@ import {
     faVideo,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import './CardTour.scss';
 
 function CardTour({ ...item }) {
+    const [clickHear, setClickHear] = useState(false);
+
     return (
         <div className="CardTour__wrapper">
             <div className="CardTour__inner">
@@ -53,7 +56,7 @@ function CardTour({ ...item }) {
                         </span>
                         <div className="CardTour__details-price">
                             From
-                            <span>{item.price}</span>
+                            <span>$ {item.price}.00</span>
                         </div>
                     </div>
                     <div className="CardTour__footer">
@@ -79,7 +82,13 @@ function CardTour({ ...item }) {
                 </div>
 
                 <button className="CardTour__btn-like">
-                    <FontAwesomeIcon icon={faHeart} />
+                    <FontAwesomeIcon
+                        icon={faHeart}
+                        onClick={() => {
+                            setClickHear(!clickHear);
+                        }}
+                        style={clickHear ? { color: 'red' } : { color: 'white' }}
+                    />
                     <span className="CardTour__btn-like-blur"></span>
                 </button>
                 <span

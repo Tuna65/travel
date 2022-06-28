@@ -16,6 +16,7 @@ import img3 from './../../assets/img/post-3-580x450.jpg';
 import img4 from './../../assets/img/post-4-580x450.jpg';
 import img5 from './../../assets/img/post-5-580x450.jpg';
 import img6 from './../../assets/img/post-6-580x450.jpg';
+import { Link } from 'react-router-dom';
 
 function BlogPost() {
     const data = [
@@ -99,7 +100,9 @@ function BlogPost() {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ duration: 2, type: 'spring' }}
                             >
-                                <BlogCard {...item} />
+                                <Link to="/posts">
+                                    <BlogCard {...item} />
+                                </Link>
                             </motion.div>
                         </SwiperSlide>
                     ))}

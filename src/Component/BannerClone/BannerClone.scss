@@ -1,0 +1,42 @@
+.BannerClone__wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.BannerClone__mySwiper {
+    width: 100%;
+
+    .BannerClone__slide {
+        width: 100%;
+        height: 260px;
+        background-size: cover;
+        position: relative;
+        background-position: center;
+
+        .BannerClone__slide-content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            h4 {
+                font-size: 65px;
+                color: var(--white);
+            }
+
+            .BannerClone__slide-content-question {
+                color: var(--white);
+                font-size: 24px;
+                font-weight: 500;
+                display: inline-block;
+                margin-top: 60px;
+            }
+        }
+    }
+}

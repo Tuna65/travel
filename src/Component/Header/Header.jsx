@@ -1,14 +1,17 @@
 import './Header.scss';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faMagnifyingGlass, faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../../assets/img/logo.png';
 import { useState } from 'react';
+import LoginLayout from '../Layout/LoginLayout/LoginLayout';
 
 function Header() {
     const [isSearch, setIsSearch] = useState(false);
     const [isUser, setIsUser] = useState(false);
     const [isHeaderPosition, setIsHeaderPosition] = useState(false);
+    const [isHiddenLayout, setIsHiddenLayout] = useState(false);
 
     window.onscroll = () => {
         if (window.scrollY > 10) {
@@ -24,7 +27,9 @@ function Header() {
             <div className="Header__inner">
                 <div className="Header__navbar">
                     <div className="Header__img">
-                        <img src={logo} alt="" />
+                        <Link to="/">
+                            <img src={logo} alt="" />
+                        </Link>
                     </div>
                     <div className="Header__list-item">
                         <ul className="Header__main-item">
@@ -32,39 +37,69 @@ function Header() {
                                 Home
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul className="Header__home-list">
-                                    <li>Home 1</li>
-                                    <li>Home 2</li>
-                                    <li>Home 3</li>
-                                    <li>Home 4</li>
+                                    <Link to="/">
+                                        <li>Home 1</li>
+                                    </Link>
+                                    <Link to="/">
+                                        <li>Home 2</li>
+                                    </Link>
+                                    <Link to="/">
+                                        <li>Home 3</li>
+                                    </Link>
+                                    <Link to="/">
+                                        <li>Home 4</li>
+                                    </Link>
                                 </ul>
                             </li>
                             <li>
                                 Tour Page
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul className="Header__tour-list">
-                                    <li>Tour - Top Search</li>
-                                    <li>Tour - SideBar Filter</li>
-                                    <li>Tour - List View</li>
-                                    <li>Tour - Single Layout I</li>
-                                    <li>Tour - Single Layout II</li>
+                                    <Link to="/tour">
+                                        <li>Tour - Top Search</li>
+                                    </Link>
+                                    <Link to="/tour">
+                                        <li>Tour - SideBar Filter</li>
+                                    </Link>
+                                    <Link to="/tour">
+                                        <li>Tour - List View</li>
+                                    </Link>
+                                    <Link to="/tour">
+                                        <li>Tour - Single Layout I</li>
+                                    </Link>
+                                    <Link to="/tour">
+                                        <li>Tour - Single Layout II</li>
+                                    </Link>
                                 </ul>
                             </li>
                             <li>
                                 Destination
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul className="Header__destination-list">
-                                    <li>Destination - List I</li>
-                                    <li>Destination - List II</li>
-                                    <li>Destination - Detail</li>
+                                    <Link to="/destination">
+                                        <li>Destination - List I</li>
+                                    </Link>
+                                    <Link to="/destination">
+                                        <li>Destination - List II</li>
+                                    </Link>
+                                    <Link to="/destination">
+                                        <li>Destination - Detail</li>
+                                    </Link>
                                 </ul>
                             </li>
                             <li>
                                 News
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul className="Header__news-list">
-                                    <li>New - I</li>
-                                    <li>New - II</li>
-                                    <li>New - Single</li>
+                                    <Link to="/news">
+                                        <li>New - I</li>
+                                    </Link>
+                                    <Link to="/news">
+                                        <li>New - II</li>
+                                    </Link>
+                                    <Link to="/news">
+                                        <li>New - Single</li>
+                                    </Link>
                                 </ul>
                             </li>
                             <li>
@@ -76,7 +111,9 @@ function Header() {
                                     <li>Page III</li>
                                 </ul>
                             </li>
-                            <li>Contact</li>
+                            <Link to="/contact">
+                                <li>Contact</li>
+                            </Link>
                         </ul>
                     </div>
                 </div>
@@ -120,7 +157,13 @@ function Header() {
                                         : { transform: 'scale(0)', transformOrigin: 'top' }
                                 }
                             >
-                                <div className="Header__login">
+                                <div
+                                    className="Header__login"
+                                    onClick={() => {
+                                        setIsHiddenLayout(true);
+                                        setIsUser(false);
+                                    }}
+                                >
                                     <FontAwesomeIcon icon={faUser} />
                                     <span>Login</span>
                                 </div>
@@ -133,6 +176,7 @@ function Header() {
                     </div>
                 </div>
             </div>
+            <LoginLayout state={isHiddenLayout} func={setIsHiddenLayout} />
         </div>
     );
 }

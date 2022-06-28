@@ -1,10 +1,14 @@
 import { faJedi, faPersonSkating, faPersonWalking, faPlaneDeparture, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import VideoLayout from '../Layout/VideoLayout/VideoLayout';
 import Title from '../Title/Title';
 import './Description.scss';
 
 function Description() {
+    const [isHiddenVideo, setIsHiddenVideo] = useState(false);
+
     const dataTrip = [
         {
             path: faJedi,
@@ -35,6 +39,9 @@ function Description() {
                                 initial={{ right: '30%' }}
                                 whileInView={{ right: '0%' }}
                                 transition={{ duration: 1.5, type: 'spring' }}
+                                onClick={() => {
+                                    setIsHiddenVideo(true);
+                                }}
                             >
                                 <FontAwesomeIcon icon={faPlay} />
                             </motion.div>
@@ -69,6 +76,7 @@ function Description() {
                     </div>
                 </div>
             </div>
+            <VideoLayout state={isHiddenVideo} func={setIsHiddenVideo} />
         </div>
     );
 }

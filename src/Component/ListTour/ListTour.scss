@@ -1,0 +1,133 @@
+.ListTour__wrapper {
+    background-color: var(--white);
+    padding: 50px 0 80px;
+
+    .ListTour__inner {
+        max-width: 1140px;
+        margin: auto;
+        padding: 0 15px;
+    }
+}
+
+.ListTour__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .ListTour__filter-left {
+        display: flex;
+        align-items: center;
+
+        .ListTour__filter-left-total {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        > :nth-child(2) {
+            margin-left: 8px;
+            color: var(--text-color);
+        }
+    }
+
+    .ListTour__filter-right {
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+
+        > * {
+            margin-left: 12px;
+        }
+
+        .icon-type-filter {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+            span {
+                font-size: 20px;
+                position: absolute;
+            }
+        }
+
+        .ListTour__filter-options {
+            position: relative;
+            padding: 10px 8px;
+            border: 3px solid var(--bg-element);
+            width: 175px;
+            cursor: pointer;
+
+            .ListTour__filter-options-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+
+                .container-angle-icon {
+                    span {
+                        font-size: 14px;
+                        position: absolute;
+                        right: 10px;
+                        top: 0px;
+                    }
+                }
+
+                .ListTour__filter-choose {
+                    position: absolute;
+                    border: 1px solid var(--bg-element);
+                    width: 175px;
+                    overflow-y: scroll;
+                    top: 30px;
+                    right: -11px;
+                    background-color: var(--white);
+                    z-index: 5;
+
+                    > * {
+                        padding: 12px 8px;
+                        border-bottom: 1px solid var(--bg-element);
+                        cursor: pointer;
+
+                        &:hover {
+                            color: var(--black);
+                        }
+                    }
+
+                    .active {
+                        color: var(--black);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ListTour__page-number {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    span {
+        padding: 10px 16px;
+        display: inline-block;
+        border-radius: 4px;
+        border: 2px solid var(--bg-element);
+        color: var(--black);
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    > :last-child {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        svg {
+            margin-left: 6px;
+            font-size: 12px;
+        }
+    }
+
+    .active {
+        border: 2px solid var(--red);
+    }
+}
