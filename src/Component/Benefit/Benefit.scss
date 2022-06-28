@@ -73,3 +73,20 @@
         }
     }
 }
+
+@media (max-width: 710px) {
+    .Benefit__right {
+        padding: 0 15px;
+    }
+
+    .Benefit__right-container {
+        .Benefit__right-container-content {
+            #plane {
+                margin: 0;
+            }
+            .Benefit__right-content-description {
+                margin-left: 14px;
+            }
+        }
+    }
+}

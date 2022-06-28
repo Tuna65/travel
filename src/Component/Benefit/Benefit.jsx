@@ -47,7 +47,7 @@ function Benefit() {
                                     </div>
                                 </div>
                                 <div className="Benefit__right-container-content">
-                                    <FontAwesomeIcon icon={faPlaneDeparture} />
+                                    <FontAwesomeIcon icon={faPlaneDeparture} id="plane" />
                                     <div className="Benefit__right-content-description">
                                         <h4>Professional and Certified</h4>
                                         <p>

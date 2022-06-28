@@ -19,3 +19,13 @@
         }
     }
 }
+
+@media (max-width: 710px) {
+    .Title__wrapper {
+        .Title__inner {
+            .Title__note {
+                font-size: 30px;
+            }
+        }
+    }
+}

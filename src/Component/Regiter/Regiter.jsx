@@ -12,7 +12,7 @@ function Regiter() {
             <div className="Regiter__inner">
                 <div className="grid">
                     <div className="row">
-                        <div className="col l-6 Regiter__left">
+                        <div className="col l-6 m-6 c-12 Regiter__left">
                             <motion.div
                                 className="Regiter__title"
                                 initial={{ top: '100px' }}
@@ -45,7 +45,7 @@ function Regiter() {
                                 </button>
                             </motion.div>
                         </div>
-                        <div className="col l-6 Regiter__right">
+                        <div className="col l-6 m-6 c-12 Regiter__right">
                             <motion.div
                                 className="Regiter__right-img"
                                 initial={{ top: '200px' }}

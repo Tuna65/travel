@@ -21,7 +21,7 @@ function DestinationList() {
                 <div className="grid">
                     <div className="row ">
                         <motion.div
-                            className="col l-3 dl__card"
+                            className="col l-3 m-3 c-12 dl__card"
                             initial={{ right: '15%', opacity: 0 }}
                             whileInView={{ right: '0%', opacity: 1 }}
                             transition={transiton}
@@ -30,7 +30,7 @@ function DestinationList() {
                         </motion.div>
 
                         <motion.div
-                            className="col l-6 dl__card"
+                            className="col l-6 m-6 c-12 dl__card"
                             initial={{ top: '100px', opacity: 0 }}
                             whileInView={{ top: '0px', opacity: 1 }}
                             transition={transiton}
@@ -39,7 +39,7 @@ function DestinationList() {
                         </motion.div>
 
                         <motion.div
-                            className="col l-3 dl__card"
+                            className="col l-3 m-3 c-12 dl__card"
                             initial={{ left: '15%', opacity: 0 }}
                             whileInView={{ left: '0%', opacity: 1 }}
                             transition={transiton}
@@ -47,7 +47,7 @@ function DestinationList() {
                             <DestinationCard path={img3} type="" country="Singapore" number="3" />
                         </motion.div>
                         <motion.div
-                            className="col l-6 dl__card"
+                            className="col l-6 col l-6 m-6 c-12 dl__card"
                             initial={{ right: '15%', opacity: 0 }}
                             whileInView={{ right: '0%', opacity: 1 }}
                             transition={transiton}
@@ -55,7 +55,7 @@ function DestinationList() {
                             <DestinationCard path={img4} type="Wildlife" country="Hungary" number="3" />
                         </motion.div>
                         <motion.div
-                            className="col l-6 dl__card"
+                            className="col l-6 col l-6 m-6 c-12 dl__card"
                             initial={{ left: '15%', opacity: 0 }}
                             whileInView={{ left: '0%', opacity: 1 }}
                             transition={transiton}

@@ -16,3 +16,9 @@
     position: relative;
     right: 0%;
 }
+
+@media (max-width: 710px) {
+    .DestinationList__wrapper {
+        padding: 0 15px;
+    }
+}

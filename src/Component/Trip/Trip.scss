@@ -125,3 +125,9 @@
         background-color: var(--black);
     }
 }
+
+@media (min-width: 768px) {
+    .Trip__wrapper {
+        padding: 0 15px;
+    }
+}

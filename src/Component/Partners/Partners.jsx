@@ -22,7 +22,7 @@ function Partners() {
             <div className="Partners__inner">
                 <div className="grid">
                     <div className="row">
-                        <div className="col l-4 Partners__left">
+                        <div className="col l-4 m-4 c-12 Partners__left">
                             <motion.span
                                 className="Partners__left-text"
                                 initial={{ right: '30%' }}
@@ -32,7 +32,7 @@ function Partners() {
                                 Our Partners
                             </motion.span>
                         </div>
-                        <div className="col l-8 Partners__right">
+                        <div className="col l-8 m-4 c-12 Partners__right">
                             <Swiper
                                 slidesPerView={4}
                                 spaceBetween={30}

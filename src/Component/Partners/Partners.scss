@@ -3,6 +3,7 @@
     background-size: cover;
     background-color: var(--red);
     width: 100%;
+    padding: 80px 0;
 
     .Partners__inner {
         max-width: 1140px;
@@ -16,8 +17,6 @@
 }
 
 .Partners__left {
-    padding: 90px 0;
-
     .Partners__left-text {
         font-size: 36px;
         color: var(--white);
@@ -43,4 +42,22 @@
 
 .partners__image {
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .Partners__wrapper {
+        padding: 40px 15px;
+    }
+
+    .Partners__left {
+        margin-bottom: 20px;
+
+        .Partners__left-text {
+            font-size: 24px;
+        }
+    }
+
+    .Partners__right-img {
+        transform: scale(0.6);
+    }
 }

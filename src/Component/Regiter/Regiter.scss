@@ -65,3 +65,20 @@
         position: relative;
     }
 }
+
+@media (max-width: 710px) {
+    .Regiter__wrapper {
+        padding: 0 15px;
+    }
+
+    .Regiter__right {
+        padding-left: 0px;
+        margin-top: 20px;
+
+        .Regiter__right-img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

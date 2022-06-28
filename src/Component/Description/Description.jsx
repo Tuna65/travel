@@ -33,11 +33,11 @@ function Description() {
             <div className="Description__inner">
                 <div className="grid">
                     <div className="row">
-                        <div className="col l-7 Description__left ">
+                        <div className="col l-7 m-7 c-12 Description__left ">
                             <motion.div
                                 className="Description__link"
                                 initial={{ right: '30%' }}
-                                whileInView={{ right: '0%' }}
+                                whileInView={{ right: '-5%' }}
                                 transition={{ duration: 1.5, type: 'spring' }}
                                 onClick={() => {
                                     setIsHiddenVideo(true);
@@ -52,7 +52,7 @@ function Description() {
                                 />
                             </div>
                         </div>
-                        <div className="col l-5 Description__right">
+                        <div className="col l-5 m-5 c-12 Description__right">
                             {dataTrip.map((item, index) => (
                                 <motion.div
                                     className="Description__right-inner"

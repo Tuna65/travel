@@ -12,7 +12,6 @@
         border-radius: 8px;
         top: -50px;
         z-index: 1;
-        align-items: center;
         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 
         .search-form__inner-items {
@@ -83,4 +82,42 @@
 .inner-item-container {
     position: absolute;
     z-index: 5;
+}
+
+// =================================================================
+@media (max-width: 710px) {
+    .search-form__wrapper {
+        padding: 0 20px;
+        .search-form__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            .search-form__inner-items {
+                margin-bottom: 12px;
+            }
+
+            .Destinations__wrapper,
+            .Acivity__wrapper {
+                top: 0;
+            }
+            .Date__wrapper,
+            .Guest__wrapper {
+                top: 0;
+                left: -2px;
+            }
+            .Filter__wrapper {
+                top: 80%;
+            }
+
+            .inner-icon__menu {
+                padding: 20px 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 710px) {
+    .Contact__wrapper {
+        padding-left: 15px;
+    }
 }

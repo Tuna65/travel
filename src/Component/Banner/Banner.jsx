@@ -18,7 +18,7 @@ function Banner() {
             <Swiper
                 spaceBetween={30}
                 autoplay={{
-                    delay: 5000,
+                    delay: 500000,
                     disableOnInteraction: false,
                 }}
                 effect={'fade'}

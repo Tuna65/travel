@@ -10,6 +10,8 @@
 }
 
 .Description__left {
+    display: block;
+
     .Description__link {
         position: relative;
         animation: links 0.8s linear infinite;
@@ -134,5 +136,11 @@
             color: var(--white);
             transform: scale(0.8);
         }
+    }
+}
+
+@media (max-width: 710px) {
+    .Description__wrapper {
+        padding: 0 15px;
     }
 }

@@ -21,7 +21,7 @@ function Contact() {
             <div className="Contact__inner">
                 <div className="grid">
                     <div className="row">
-                        <div className="col l-4 Contact__contact">
+                        <div className="col l-4 m-4 c-12 Contact__contact">
                             <div className="Contact__contact-img">
                                 <img src={logo} alt="" />
                             </div>
@@ -45,7 +45,7 @@ function Contact() {
                         </div>
 
                         {items.map((item, index) => (
-                            <div className="col l-2 Contact__item" key={index}>
+                            <div className="col l-2 m-2 c-12 Contact__item" key={index}>
                                 <span className="Contact__item-type">{item.type}</span>
                                 {item.details.map((detail, index) => (
                                     <ul className="Contact__item-list" key={index}>
@@ -55,7 +55,7 @@ function Contact() {
                             </div>
                         ))}
 
-                        <div className="col l-4 Contact__newsletter">
+                        <div className="col l-4 m-4 c-12 Contact__newsletter">
                             <div className="Contact__newsletter-container">
                                 <span className="Contact__newsletter-type">Newsletter</span>
                                 <div className="Contact__newsletter-form">

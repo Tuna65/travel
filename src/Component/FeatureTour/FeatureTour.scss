@@ -43,3 +43,9 @@
         transform: scale(1.5);
     }
 }
+
+@media (max-width: 710px) {
+    .FeatureTour__wrapper {
+        padding: 0 15px;
+    }
+}
