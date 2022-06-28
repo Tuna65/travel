@@ -2,13 +2,14 @@ import './Acivity.scss';
 import { useContext, useState } from 'react';
 import { guestContext } from './../../../GuetsContext';
 
-function Acivity() {
+function Acivity({ func }) {
     const result = useContext(guestContext);
     const [Active, setActive] = useState('Adventure');
 
     const handleOnclick = (e, values) => {
         result.handleGetAcivity(values);
         setActive(values);
+        func(false);
     };
 
     const Acivitys = ['Adventure', 'Beache', 'City Tours', 'Cruise', 'Discovery', 'Historical'];

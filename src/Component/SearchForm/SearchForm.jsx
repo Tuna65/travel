@@ -29,7 +29,7 @@ function SearchForm() {
             question: 'Where are you going?',
             type: result.getDestination,
             icon: faAngleDown,
-            down: <Destinations />,
+            down: <Destinations func={setIsDestination} />,
             ishidden: isDestination,
             handleOnclick: function () {
                 setIsDestination((prev) => !prev);
@@ -44,7 +44,7 @@ function SearchForm() {
             question: 'Activity Type',
             type: result.getAcivity,
             icon: faAngleDown,
-            down: <Acivity />,
+            down: <Acivity func={setIsActivity} />,
             ishidden: isActivity,
             handleOnclick: function () {
                 setIsActivity((prev) => !prev);

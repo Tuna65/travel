@@ -1,7 +1,7 @@
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faMagnifyingGlass, faUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faBars, faMagnifyingGlass, faUser, faUserPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../../assets/img/logo.png';
 import { useState } from 'react';
@@ -12,6 +12,8 @@ function Header() {
     const [isUser, setIsUser] = useState(false);
     const [isHeaderPosition, setIsHeaderPosition] = useState(false);
     const [isHiddenLayout, setIsHiddenLayout] = useState(false);
+
+    const [isHiddenMenu, setIsHiddenMenu] = useState(true);
 
     window.onscroll = () => {
         if (window.scrollY > 10) {
@@ -31,8 +33,11 @@ function Header() {
                             <img src={logo} alt="" />
                         </Link>
                     </div>
-                    <div className="Header__list-item">
-                        <ul className="Header__main-item">
+                    <div
+                        className="Header__list-item"
+                        style={isHiddenMenu ? { transform: 'scale(0)' } : { transform: 'scale(1)' }}
+                    >
+                        <ul className="Header__main-item" style={isHiddenMenu ? { left: '-72%' } : { left: '0%' }}>
                             <li className="Header__active">
                                 Home
                                 <FontAwesomeIcon icon={faAngleDown} />
@@ -114,6 +119,9 @@ function Header() {
                             <Link to="/contact">
                                 <li>Contact</li>
                             </Link>
+                            <span className="icon-close-list" onClick={() => setIsHiddenMenu(true)}>
+                                <FontAwesomeIcon icon={faXmark} className="icon-close-list-x" />
+                            </span>
                         </ul>
                     </div>
                 </div>
@@ -173,6 +181,9 @@ function Header() {
                                 </div>
                             </div>
                         </div>
+                        <span className="Header__icon-menu">
+                            <FontAwesomeIcon icon={faBars} onClick={() => setIsHiddenMenu(false)} />
+                        </span>
                     </div>
                 </div>
             </div>

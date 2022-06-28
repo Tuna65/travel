@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { guestContext } from './../../../GuetsContext';
 import './Destination.scss';
 
-function Destinations() {
+function Destinations({ func }) {
     const result = useContext(guestContext);
 
     const [Active, setActive] = useState('Moroco');
@@ -10,6 +10,7 @@ function Destinations() {
     const handleOnclick = (e, values) => {
         result.handleGetDestination(values);
         setActive(values);
+        func(false);
     };
 
     const Destinations = [
