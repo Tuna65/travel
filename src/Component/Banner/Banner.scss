@@ -1,6 +1,5 @@
 .Banner__wrapper {
     width: 100%;
-    height: auto;
 }
 
 .Banner__mySwiper {
@@ -378,6 +377,7 @@
 @media (max-width: 710px) {
     .Banner__mySwiper {
         .Banner__slide {
+            height: 300px;
             .Banner__slide-content {
                 h4 {
                     font-size: 20px;
