@@ -49,10 +49,6 @@ function ContactForm() {
         if (valueName !== '' && valuePhone !== '' && valueEmail !== '' && valueSubject !== '' && valueMessage !== '') {
             warning.current.innerText = '';
         } else e.preventDefault();
-
-        // if (isBorder) {
-        //     event.preventDefault();
-        // }
     };
     return (
         <div className="ContactForm__wrapper">

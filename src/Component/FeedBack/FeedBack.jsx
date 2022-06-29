@@ -82,10 +82,6 @@ function FeedBack() {
                                 slidesPerView: 3,
                                 spaceBetween: 40,
                             },
-                            '@1.50': {
-                                slidesPerView: 4,
-                                spaceBetween: 50,
-                            },
                         }}
                         className="FeedBack__mySwiper"
                     >
