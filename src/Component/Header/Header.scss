@@ -30,7 +30,6 @@
 
 .Header__list-item {
     .Header__main-item {
-        position: relative;
         list-style: none;
         display: flex;
         color: var(--text-color);
@@ -73,6 +72,7 @@
         }
         .icon-close-list {
             position: absolute;
+            display: none;
             top: 0;
             right: 0;
             .icon-close-list-x {
@@ -298,13 +298,18 @@
             display: flex;
             flex-direction: column;
             background-color: var(--white);
-            left: -72%;
+            // left: -72%;
+
             top: 0;
             bottom: 0;
             transition: left 0.5s ease;
 
             > * {
                 text-align: left;
+            }
+
+            .icon-close-list {
+                display: block;
             }
         }
     }

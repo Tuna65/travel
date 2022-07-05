@@ -35,7 +35,8 @@ function Header() {
                     </div>
                     <div
                         className="Header__list-item"
-                        style={isHiddenMenu ? { transform: 'scale(0)' } : { transform: 'scale(1)' }}
+                        // style={isHiddenMenu ? { transform: 'scale(0)' } : { transform: 'scale(1)' }}
+                        style={isHiddenMenu ? { position: 'static' } : { position: 'fixed' }}
                     >
                         <ul className="Header__main-item" style={isHiddenMenu ? { left: '-72%' } : { left: '0%' }}>
                             <li className="Header__active">
