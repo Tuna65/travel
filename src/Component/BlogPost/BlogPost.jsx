@@ -59,7 +59,7 @@ function BlogPost() {
     ];
 
     return (
-        <div className="BlogPost__wrapper">
+        <div className="BlogPost__wrapper sd">
             <div className="BlogPost__inner">
                 <div className="BlogPost__title">
                     <motion.div
